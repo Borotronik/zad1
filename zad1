@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sveučilište VERN</title>
+    <style>
+        body {
+            font: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(vernbg.jpg);
+        }
+        header {
+            background-color: #cc0000;
+            color: white;
+            padding: 1em;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 0;
+        }
+        .tabovi {
+            background-color: #ff3333;
+            overflow: hidden;
+        }
+        .tabovi a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .tabovi a:hover {
+            background-color: #b30000;
+        }
+        main {
+            padding: 1px;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+        .sadrzaj {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        .sadrzaj:target {
+            display: block;
+            opacity: 1;
+        }
+        footer {
+            background-color: #cc0000;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .meni {
+            display: none;
+        }
+        .meniikona {
+            display: none;
+            cursor: pointer;
+        }
+        .meniikona div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+        @media (max-width: 768px) {
+            header img {
+                display: none;
+            }
+            .meniikona {
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+            }
+            .tabovi {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+            }
+            .tabovi a {
+                float: none;
+                width: 100%;
+            }
+            .meni:checked + .tabovi {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Sveučilište VERN'</h1>
+    <p>Dobrodošli na službenu stranicu Sveučilišta VERN'</p>
+    <input type="checkbox" id="meni" class="meni"/>
+    <label for="meni" class="meniikona">
+        <div></div>
+        <div></div>
+        <div></div>
+    </label>
+</header>
+
+<div class="tabovi">
+    <a href="#onama">O nama</a>
+    <a href="#studiji">Studijski programi</a>
+    <a href="#novosti">Novosti</a>
+    <a href="#kontakt">Kontakt</a>
+</div>
+
+<main>
+    <div id="onama" class="sadrzaj">
+        <h2>O nama</h2>
+        <p>Sveučilište VERN' je vodeća privatna visokoobrazovna institucija u Hrvatskoj, poznata po svojoj inovativnosti i kvaliteti obrazovanja.</p>
+    </div>
+    
+    <div id="studiji" class="sadrzaj">
+        <h2>Studijski programi</h2>
+        <ul>
+            <li><a href="#iot">Internet stvari</a></li>
+            <li><a href="#informatika">Poslovna informatika</a></li>
+            <li><a href="#ekonomija">Ekonomija poduzetništva</a></li>
+            <li><a href="#turizam">Studij Turizma</a></li>
+            <li><a href="#oj">Odnosi s javnošću</a></li>
+        </ul>
+        <p>Nudimo raznolike studijske programe iz područja poslovanja, tehnologije, umjetnosti i mnogih drugih.</p>
+    </div>
+    
+    <div id="novosti" class="sadrzaj">
+        <h2>Novosti</h2>
+        <p>Pratite najnovije vijesti i događanja na našem sveučilištu.</p>
+    </div>
+    
+    <div id="kontakt" class="sadrzaj">
+        <h2>Kontakt</h2>
+        <p>Za više informacija, slobodno nas kontaktirajte putem e-maila ili telefona.</p>
+    </div>
+
+    <div id="iot" class="sadrzaj">
+        <h2>Internet stvari</h2>
+        <p>Želiš li postati IoT developer i sudjelovati u razvoju tehnologije koja mijenja način na koji komuniciramo sa svijetom oko sebe? Znaš li da gotovo svaki dan koristimo IoT a da toga nismo ni svjesni?! Koristimo navigaciju, plaćamo beskontaktno putem mobitela ili primjerice rezerviramo parking putem app-a.</p>
+    </div>
+
+    <div id="informatika" class="sadrzaj">
+        <h2>Poslovna informatika</h2>
+        <p>What’s the P.O.I.N.T.?
+            Znaš li da svake godine samo u EU nedostaje stotine tisuća programera, a da je prosječna plaća u IT industriji u Hrvatskoj 60% veća od prosječne plaće u državi?</p>
+    </div>
+
+    <div id="ekonomija" class="sadrzaj">
+        <h2>Ekonomija poduzetništva</h2>
+        <p>Studij te priprema za ono što te očekuje u stvarnom svijetu. Onom poslovnom, naravno. Tijekom studija osposobit ćemo te za široki raspon poslova – od karijere u velikim korporativnim sustavima, do pokretanja vlastitog startupa ili vođenja obiteljskog poduzeća.</p>
+    </div>
+
+    <div id="turizam" class="sadrzaj">
+        <h2>Studij Turizma</h2>
+        <p>Danas kada su i najudaljenije destinacije tek na nekoliko sati leta, a samo jedan loš review može napraviti trajnu štetu nekoj destinaciji, s izazovima turizma možemo se nositi jedino uz pomoć struke i znanja. Zbog toga je i cilj ovog studija vrhunsko obrazovanje stručnjaka iz područja destination i hospitality menadžmenta.</p>
+    </div>
+
+    <div id="oj" class="sadrzaj">
+        <h2>Odnosi s javnošću</h2>
+        <p>Odnosi s javnošću treća su najtraženija profesija u područjima kreativnih i medijskih djelatnosti, a povećana potražnja za stručnjacima za odnose s javnošću trend je koji se očekuje i u bližoj budućnosti.</p>
+    </div>
+</main>
+
+<footer>
+    <p>2024 Sveučilište VERN</p>
+</footer>
+
+</body>
+</html>
